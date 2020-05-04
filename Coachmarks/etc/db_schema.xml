@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category SM
+ * @package SM_Coachmarks
+ * @license http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ *
+ * @author Logan Ta <phuongtt2@smartosc.com>
+ *
+ * @copyright   Copyright (c) SmartOSC. All rights reserved.
+ * @url http://www.smartosc.com/
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="sm_coachmarks_topic" resource="default" engine="innodb" comment="Topic Table">
+        <column xsi:type="int" name="topic_id" padding="10" unsigned="true" nullable="false" identity="true"
+                comment="Topic ID"/>
+        <column xsi:type="varchar" name="name" nullable="false" comment="Name"/>
+        <column xsi:type="smallint" name="status" nullable="false" default="1" comment="Status"/>
+        <column xsi:type="varchar" name="store_ids" nullable="false" comment="Store Ids"/>
+        <column xsi:type="varchar" name="id_page_use" nullable="true" comment="Page Use Tooltip"/>
+        <column xsi:type="varchar" name="action_type" nullable="false" default="page_url" comment="Action Type"/>
+        <column xsi:type="text" name="page_url" nullable="true" comment="Include Pages Url Contain"/>
+        <column xsi:type="text" name="page_cms" nullable="true" comment="Include CMS Pages"/>
+        <column xsi:type="varchar" name="description" nullable="true" comment="Description"/>
+        <column xsi:type="smallint" name="sort_order" nullable="false" default="0" comment="Sort Order"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP"
+                comment="Created Date"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="topic_id"/>
+        </constraint>
+    </table>
+
+    <table name="sm_coachmarks_tooltip" resource="default" engine="innodb" comment="Tooltip Table">
+        <column xsi:type="int" name="tooltip_id" padding="10" unsigned="true" nullable="false" identity="true"
+                comment="Tooltip ID"/>
+        <column xsi:type="varchar" name="name" nullable="false" comment="Tooltip Name"/>
+        <column xsi:type="smallint" name="status" nullable="false" default="1" comment="Status"/>
+        <column xsi:type="int" name="topic_id" nullable="true" default="1" comment="Topic Id"/>
+        <column xsi:type="varchar" name="find_type" nullable="false" default="ID" comment="Find Type"/>
+        <column xsi:type="text" name="class_element_html" nullable="false" comment="Class Element HTML"/>
+        <column xsi:type="text" name="id_element_html" nullable="false" comment="Id Element HTML"/>
+        <column xsi:type="text" name="content" nullable="false" comment="Tooltip Content"/>
+        <column xsi:type="varchar" name="position" nullable="false" default="top" comment="Position"/>
+        <column xsi:type="smallint" name="sort_order" nullable="false" default="0" comment="Sort Order"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP"
+                comment="Creation Time"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="tooltip_id"/>
+        </constraint>
+    </table>
+</schema>

@@ -1,0 +1,23 @@
+{
+  "name": "SM/module-coachmarks",
+  "description": "Magento 2 Coachmarks extension",
+  "type": "magento2-module",
+  "version": "2.0.3",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Logan Ta",
+      "email": "phuongtt2@smartosc.com",
+      "homepage": "http://www.smartosc.com/",
+      "role": "Technical Support"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "SM\\Coachmarks\\": ""
+    }
+  }
+}

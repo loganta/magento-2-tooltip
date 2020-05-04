@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category SM
+ * @package SM_Coachmarks
+ * @license http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ *
+ * @author Logan Ta <phuongtt2@smartosc.com>
+ *
+ * @copyright   Copyright (c) SmartOSC. All rights reserved.
+ * @url http://www.smartosc.com/
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="SM_Coachmarks::css/tooltipster.bundle.css"/>
+    </head>
+    <body>
+        <referenceContainer name="header.container">
+            <block class="SM\Coachmarks\Block\Topic" name="coachmarks-topic"
+                   template="coachmarks/coachmarks.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category SM
+ * @package SM_Coachmarks
+ * @license http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ *
+ * @author Logan Ta <phuongtt2@smartosc.com>
+ *
+ * @copyright   Copyright (c) SmartOSC. All rights reserved.
+ * @url http://www.smartosc.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route id="coachmarks" frontName="coachmarks">
+            <module name="SM_Coachmarks"/>
+        </route>
+    </router>
+</config>

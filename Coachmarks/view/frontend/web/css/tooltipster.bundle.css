@@ -1,0 +1,331 @@
+.coachmarks-modals-overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 5;
+}
+
+[tooltipactive = "true"] {
+    color: #3d3d3d !important;
+    opacity: 1;
+    position: relative;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    -o-transition-property: opacity;
+    -ms-transition-property: opacity;
+    transition-property: opacity;
+}
+
+#tooltip-bt-finish{
+    display: none;
+}
+
+/*add another style for tooltip*/
+.coach-marks-topic {
+    position: absolute;
+    width: auto;
+    -webkit-transform: translateZ(0); /* webkit flicker fix */
+    -webkit-font-smoothing: antialiased; /* webkit text rendering fix */
+    z-index: 99;
+}
+/*show position top*/
+.coach-marks-topic .tooltip {
+    background-color: white;
+    bottom: 100%;
+    color: #2b2b2b;
+    display: block;
+    margin-bottom: 5px;
+    padding: 12px;
+    position: absolute;
+    width: auto;
+    border-radius: 5px;
+    min-width: 300px;
+    -webkit-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
+    -ms-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+    -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+.coach-marks-topic .tooltip:before {
+    bottom: -20px;
+    content: " ";
+    display: block;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    width: auto;
+}
+
+/* CSS Triangles - see Trevor's post */
+.coach-marks-topic .tooltip-top-pointer {
+    border-left: solid transparent 10px;
+    border-right: solid transparent 10px;
+    border-top: solid white 10px;
+    bottom: -10px;
+    content: " ";
+    height: 0;
+    left: 50%;
+    margin-left: -13px;
+    position: absolute;
+    width: 0;
+}
+
+/* IE can just show/hide with no transition */
+.lte8 .coach-marks-topic .tooltip {
+    display: none;
+}
+
+.lte8 .coach-marks-topic:hover .tooltip {
+    display: block;
+}
+
+/*show position bottom*/
+.coach-marks-topic .tooltip-bottom {
+    background-color: white;
+    color: #2b2b2b;
+    display: block;
+    top: 100%;
+    margin-top: 5px;
+    padding: 12px;
+    position: absolute;
+    width: auto;
+    border-radius: 10px;
+    min-width: 300px;
+    -webkit-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
+    -ms-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+    -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+.coach-marks-topic .tooltip-bottom:before {
+    bottom: -20px;
+    content: " ";
+    display: block;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    width: auto;
+}
+
+/* CSS Triangles - see Trevor's post */
+.coach-marks-topic .tooltip-bottom-pointer {
+    border-right: solid transparent 10px;
+    border-left: solid transparent 10px;
+    border-bottom: solid white 10px;
+    top: -10px;
+    content: " ";
+    height: 0;
+    left: 50%;
+    margin-left: -13px;
+    position: absolute;
+    width: 0;
+}
+#tool-next,#tool-finish{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+#tooltip_content{
+    position: relative;
+}
+#tooltip_content  button{
+    padding: 3px;
+    height: 27px;
+    min-width: 90px;
+}
+#tool-content{
+    padding-right: 130px;
+}
+
+    /* IE can just show/hide with no transition */
+.lte8 .coach-marks-topic .tooltip-bottom {
+    display: none;
+}
+
+.lte8 .coach-marks-topic:hover .tooltip-bottom {
+    display: block;
+}
+
+.make-note-highligh{
+    background: cornflowerblue !important;
+}
+
+#tool-step{
+    margin-top: 20px;
+    height: 10px
+}
+
+#tool-step span{
+    box-sizing: content-box;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #ccc;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+@media only screen and (max-width: 767px) {
+    .coach-marks-topic .tooltip{
+        min-width: 300px;
+    }
+}
+
+/*show position right*/
+.coach-marks-topic .tooltip-right {
+    background-color: white;
+    bottom: 100%;
+    color: #2b2b2b;
+    display: block;
+    margin-bottom: 15px;
+    padding: 20px;
+    position: absolute;
+    width: auto;
+    border-radius: 5px;
+    min-width: 400px;
+    -webkit-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
+    -ms-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+    -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+.coach-marks-topic .tooltip-right:before {
+    bottom: -20px;
+    content: " ";
+    display: block;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    width: auto;
+}
+
+/* CSS Triangles - see Trevor's post */
+.coach-marks-topic .tooltip-right:after {
+    border-left: solid transparent 10px;
+    border-top: solid white 10px;
+    left: 3px;
+    bottom: 50%;
+    content: " ";
+    height: 0;
+    margin-left: -13px;
+    position: absolute;
+    width: 0;
+}
+
+/* IE can just show/hide with no transition */
+.lte8 .coach-marks-topic .tooltip-right {
+    display: none;
+}
+
+.lte8 .coach-marks-topic:hover .tooltip-right {
+    display: block;
+}
+
+/*show position left*/
+.coach-marks-topic .tooltip-left {
+    background-color: white;
+    bottom: 100%;
+    color: #2b2b2b;
+    display: block;
+    margin-bottom: 15px;
+    padding: 20px;
+    position: absolute;
+    width: auto;
+    border-radius: 5px;
+    min-width: 400px;
+    -webkit-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
+    -ms-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+    -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+.coach-marks-topic .tooltip-left:before {
+    bottom: -20px;
+    content: " ";
+    display: block;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    width: auto;
+}
+
+/* CSS Triangles - see Trevor's post */
+.coach-marks-topic .tooltip-left:after {
+    border-right: solid transparent 10px;
+    border-top: solid white 10px;
+    bottom: 50%;
+    content: " ";
+    height: 0;
+    right: -2%;
+    margin-left: -13px;
+    position: absolute;
+    width: 0;
+}
+
+/* IE can just show/hide with no transition */
+.lte8 .coach-marks-topic .tooltip-left {
+    display: none;
+}
+
+.lte8 .coach-marks-topic:hover .tooltip-left {
+    display: block;
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category SM
+ * @package SM_Coachmarks
+ * @license http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ *
+ * @author Logan Ta <phuongtt2@smartosc.com>
+ *
+ * @copyright   Copyright (c) SmartOSC. All rights reserved.
+ * @url http://www.smartosc.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="coachmarks_tooltip_listing_data_source" xsi:type="string">SM\Coachmarks\Model\ResourceModel\Tooltip\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="coachmarks_topic_listing_data_source" xsi:type="string">SM\Coachmarks\Model\ResourceModel\Topic\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="SM\Coachmarks\Model\ResourceModel\Tooltip\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">sm_coachmarks_tooltip</argument>
+            <argument name="resourceModel" xsi:type="string">SM\Coachmarks\Model\ResourceModel\Tooltip</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="SM\Coachmarks\Model\ResourceModel\Topic\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">sm_coachmarks_topic</argument>
+            <argument name="resourceModel" xsi:type="string">SM\Coachmarks\Model\ResourceModel\Topic</argument>
+        </arguments>
+    </virtualType>
+</config>

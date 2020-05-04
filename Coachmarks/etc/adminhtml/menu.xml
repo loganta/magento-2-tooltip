@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category SM
+ * @package SM_Coachmarks
+ * @license http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ *
+ * @author Logan Ta <phuongtt2@smartosc.com>
+ *
+ * @copyright   Copyright (c) SmartOSC. All rights reserved.
+ * @url http://www.smartosc.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="SM_Coachmarks::coachmarks" title="CoachMarks" module="SM_Coachmarks" sortOrder="100" resource="SM_Coachmarks::coachmarks" parent="Magento_Backend::content"/>
+        <add id="SM_Coachmarks::topic" title="Manage Tooltips" module="SM_Coachmarks" sortOrder="20" parent="SM_Coachmarks::coachmarks" action="coachmarks/tooltip/index" resource="SM_Coachmarks::tooltip"/>
+        <add id="SM_Coachmarks::tooltip" title="Manage Topic Pages" module="SM_Coachmarks" sortOrder="30" parent="SM_Coachmarks::coachmarks" action="coachmarks/topic/index" resource="SM_Coachmarks::topic"/>
+        <add id="SM_Coachmarks::configuration" title="Configuration" module="SM_Coachmarks" sortOrder="70" parent="SM_Coachmarks::coachmarks" action="adminhtml/system_config/edit/section/coachmarks" resource="SM_Coachmarks::configuration"/>
+    </menu>
+</config>

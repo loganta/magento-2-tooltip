@@ -1,0 +1,34 @@
+{
+    "sm_topic": {
+        "column": {
+            "topic_id": true,
+            "name": true,
+            "status": true,
+            "store_ids": true,
+            "page_use": true,
+            "description": true,
+            "sort_order": true,
+            "from_date": true,
+            "to_date": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "sm_tooltip": {
+        "column": {
+            "tooltip_id": true,
+            "name": true,
+            "status": true,
+            "topic_id": true,
+            "id_element_html": true,
+            "content": true,
+            "sort_order": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
